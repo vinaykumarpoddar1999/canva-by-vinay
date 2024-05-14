@@ -1,13 +1,14 @@
-import './App.css'
-
+import "./App.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Index from './pages/Index'
 function App() {
-  
-
-  return (
-    <>
-<div>Canva</div>
-    </>
-  )
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Index />,
+    },
+  ]);
+  return  <RouterProvider router={router} />
 }
 
-export default App
+export default App;
