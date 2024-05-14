@@ -1,5 +1,3 @@
-//vinaykumarpoddar1999
-//VINAY143
 const express = require('express')
 const mongoose = require('mongoose')
 const app = express()
@@ -25,7 +23,7 @@ if (process.env.NODE_ENV === 'local') {
 // app.use('/api', require('./routes/designRoutes'))
 // app.use('/api', require('./routes/authRoutes'))
 
-if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === 'local') {
     app.use(express.static(path.join(__dirname, "./frontend/dist")))
     app.get('*', (req, res) => {
         res.sendFile(path.resolve(__dirname, "./", "frontend", "dist", "index.html"))
